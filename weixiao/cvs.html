@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+    #cvs {
+        background-color: #05ef9f;
+    }
+    
+    .state {
+        background: #05ef9f;
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="state">说明：上下左右键操作小女孩走动，空格键控制小女孩停止</div>
+    <canvas id="cvs" width="1348" height="598" style="border:1px solid #05ef9f; "></canvas>
+    <script src="js/Sprite.js"></script>
+    <script src="js/getImage.js"></script>
+    <script>
+    window.onload = function() {
+        var timer = null
+        var index = 0;
+        var left = 512;
+        var top = 100;
+        var jilu = null;
+        var cvs = document.getElementById('cvs');
+        var ctx = cvs.getContext('2d');
+        var spriteImg = new Image();
+        spriteImg.src = './images/sprite.png';
+        spriteImg.onload = function() {
+            ctx.drawImage(spriteImg,
+                256 * index, 256 * 6, 256, 256,
+                left, top, 256, 256);
+        }
+        document.onkeyup = function(event) {
+            var aaa = event.keyCode;
+            if (aaa === 37) {
+                clearInterval(timer);
+                timer = setInterval(function() {
+                    ctx.clearRect(0, 0, cvs.width, cvs.height);
+                    ctx.drawImage(spriteImg,
+                        256 * index, 0, 256, 256,
+                        left, top, 256, 256);
+                    index = index + 1;
+                    if (index > 7) {
+                        index = 0;
+                    }
+                    left -= 3;
+                    // if (spriteX < 0) {
+                    //     clearInterval(timer)
+                    // }
+                    console.log(1111);
+                }, 80)
+            } else if (aaa === 38) {
+                clearInterval(timer);
+                timer = setInterval(function() {
+                    ctx.clearRect(0, 0, cvs.width, cvs.height);
+                    ctx.drawImage(spriteImg,
+                        256 * index, 512, 256, 256,
+                        left, top, 256, 256);
+                    index = index + 1;
+                    if (index > 7) {
+                        index = 0;
+                    }
+                    top -= 3;
+                    // if (spriteX < 0) {
+                    //     clearInterval(timer)
+                    // }
+                }, 80)
+            } else if (aaa === 39) {
+                clearInterval(timer);
+                timer = setInterval(function() {
+                    ctx.clearRect(0, 0, cvs.width, cvs.height);
+                    ctx.drawImage(spriteImg,
+                        256 * index, 256 * 4, 256, 256,
+                        left, top, 256, 256);
+                    index = index + 1;
+                    if (index > 7) {
+                        index = 0;
+                    }
+                    left += 3;
+                    // if (spriteX > 400) {
+                    //     clearInterval(timer)
+                    // }
+                }, 80)
+            } else if (aaa === 40) {
+                clearInterval(timer)
+                timer = setInterval(function() {
+                    ctx.clearRect(0, 0, cvs.width, cvs.height);
+                    ctx.drawImage(spriteImg,
+                        256 * index, 256 * 6, 256, 256,
+                        left, top, 256, 256);
+                    index = index + 1;
+                    if (index > 7) {
+                        index = 0;
+                    }
+                    top += 3;
+                    // if (spriteX > 250) {
+                    //     clearInterval(timer)
+                    // } 
+                }, 80)
+            }
+
+            if (aaa === 32) {
+                clearInterval(timer)
+            }
+        }
+    }
+    </script>
+</body>
+
+</html>

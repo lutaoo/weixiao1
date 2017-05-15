@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 动画</title>
+    <style>
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        .handle {
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            position: relative;
+            padding: 0;
+            margin: 0;
+        }
+
+        .handle li {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .handle li:nth-child(1) {
+            z-index: 3;
+            background-image: url(./images/bg1.jpg);
+            background-size: cover;
+        }
+
+        .handle li:nth-child(2) {
+            z-index: 2;
+            background-image: url(./images/bg2.jpg);
+            background-size: cover;
+        }
+
+        .handle li:nth-child(3) {
+            z-index: 1;
+            background-image: url(./images/bg3.jpg);
+            background-size: cover;
+        }
+
+        .btn {
+            position: absolute;
+            bottom: 60px;
+            height: 100px;
+            width: 100%;
+            z-index: 5;
+
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn li {
+            width: 80px;
+            height: 80px;
+            margin: 0 10px;
+            text-align: center;
+            line-height: 80px;
+            font-size: 30px;
+            border-radius: 50%;
+            background-color: pink;
+        }
+
+        .btn li a {
+            display: block;
+            text-decoration: none;
+            color: #000;
+        }
+
+        #img1:target {
+            z-index: 3;
+
+            animation: slideleft 1s linear;
+        }
+
+        #img2:target {
+            z-index: 3;
+
+            animation: rotate 1s linear;
+        }
+
+        #img3:target {
+            z-index: 3;
+        }
+
+        /*第一屏*/
+        @keyframes slideleft {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /*第一屏*/
+        @keyframes rotate {
+            0% {
+                transform: scale(0) rotate(0deg);
+            }
+
+            100% {
+                transform: scale(1) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul class="handle">
+        <li id="img1"></li>
+        <li id="img2"></li>
+        <li id="img3"></li>
+    </ul>
+
+    <ul class="btn">
+        <li>
+            <a href="#img1">1</a>
+        </li>
+        <li>
+            <a href="#img2">2</a>
+        </li>
+        <li>
+            <a href="#img3">3</a>
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet"  href="css/index.css">
+    <script src="js/jquery-1.12.2.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/sfqing.js"></script>
+</head>
+<body>
+   
+<!--顶部导航栏start-->
+
+<div class="appletop">
+    <div class="topnav w">
+        <ul>
+            <li><a href="#"><img src="images/other/apple.png" alt=""/></a></li>
+            <li><a href="#">Mac</a></li>
+            <li><a href="ipadDetail.html">ipad</a></li>
+            <li><a href="#">iphone</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a href="#">技术支持</a></li>
+            <li><a href="#"><img src="images/other/search.png" alt="" id="search-icon"/></a></li>
+            <li><a href="#"><img src="images/other/shopcar.png" alt="" id="shopcar-icon"/></a></li>        
+        </ul>
+    </div>
+</div>
+<!-- 中间部分 -->
+<!-- 轮播图 -->
+<div id="box">
+    <div id="screen">
+        <ul>
+            <li>
+                <p>
+                    <img src="images/index/ccc.png" alt="" class="img11"/>
+                    <span class="word1">一目了然，就是你。</span>
+                </p>
+                <img src="images/index/watch1.png" class="img1"/>
+            </li>
+            <li>
+                <p>
+                    <span class="word21">MacBook</span>
+                    <span class="word22">轻于时代，先于时代</span>
+                </p>
+                <img src="images/index/MacBook.png" class="img2"/>
+            </li>
+            <li>
+                <p>
+                    <span class="word31">iPad Pro</span>
+                    <span class="word32">你的下一台电脑，</span>
+                    <span class="word33">现更以两种尺寸呈现。</span>
+                </p>
+                <img src="images/index/ipad Pro.png" class="img3"/>
+            </li>
+            <li>
+                <p>
+                    <span class="word41">iPhone6<i>s</i></span>
+                    <span class="word42">3D Touch、1200万像素照片、4K视频，强大功能集于一身。</span>
+                </p>
+                <img src="images/index/iphone_6s_large.jpg" class="img4"/>
+            </li>
+        </ul>
+        <ol></ol>
+    </div>
+    <div id="arr"><span id="left">&lt;</span><span id="right">&gt;</span></div>
+</div>
+
+ <!-- 内容部分 -->
+<div class="main clearfix">
+<!-- 放大镜 -->
+<div class="box1" id="box1">
+    <div id="smallBox" class="small">
+        <img src="images/001.jpg" width="350" alt=""/>
+
+        <div id="mask" class="mask"></div>
+    </div>
+    <div id="bigBox" class="big">
+        <img src="images/0001.jpg" width="800" alt=""/>
+    </div>
+    </div>
+<!-- 苹果介绍 -->
+<div class="perent">
+    <ul class="parentWrap">
+    <li>
+        <span class="groupTitle">iphone 新的体验</span>
+        <ul class="friends">
+            <li>iphone4</li>
+            <li>iphone5</li>
+            <li>iphone6</li>
+            <li>iphone6s</li>
+            <li>iphone7</li>
+        </ul>
+    </li>
+    <li>
+        <span class="groupTitle">Mac</span>
+        <ul class="friends">
+            <li>1呆</li>
+            <li>2带</li>
+            <li>3代</li>
+            <li>4代</li>
+            <li>新时代</li>
+        </ul>
+    </li>
+    <li>
+        <span class="groupTitle">ipad 随身相伴</span>
+        <ul class="friends">
+            <li>方便</li>
+            <li>浏览</li>
+            <li>与你</li>
+            <li>相伴</li>
+            <li>一生</li>
+        </ul>
+    </li>
+    <li>
+        <span class="groupTitle">apple</span>
+        <ul class="friends">
+            <li>不断</li>
+            <li>更新</li>
+            <li>满足</li>
+            <li>your</li>
+            <li>需求</li>
+        </ul>
+    </li>
+</ul>
+</div>
+<!-- 表格添加数据 -->
+<div class="wrap">
+    <div>
+        <input type="button" value="添加你的喜爱" id="j_btnAddData" class="btnAdd"/>
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <!-- <th><input type="checkbox" id="j_cbAll" /></th> -->
+            <th>手机品牌</th>
+            <th>手机颜色</th>
+            <th>喜爱程度</th>
+        </tr>
+        </thead>
+        <tbody id="j_tb">
+        <tr>
+            <!-- <td><input type="checkbox"/></td> -->
+            <td>苹果</td>
+            <td>红色</td>
+            <td><a href="javascrip:;" class="get">GET</a></td>
+        </tr>
+        <tr>
+            <!-- <td><input type="checkbox"/></td> -->
+            <td>小米</td>
+            <td>粉色</td>
+            <td><a href="javascrip:;" class="get">GET</a></td>
+        </tr>
+        <tr>
+            <td>三星</td>
+            <td>黑色</td>
+            <td><a href="javascrip:;" class="get">GET</a></td>
+        </tr>
+        <tr>
+            <!-- <td><input type="checkbox"/></td> -->
+            <td>华为</td>
+            <td>白色</td>
+            <td><a href="javascrip:;" class="get">GET</a></td>
+        </tr>
+         <tr>
+            <!-- <td><input type="checkbox"/></td> -->
+            <td>锤子</td>
+            <td>灰色</td>
+            <td><a href="javascrip:;" class="get">GET</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div id="j_mask" class="maske"></div>
+<div id="j_formAdd" class="form-add">
+    <div class="form-add-title">
+        <span>添加数据</span>
+
+        <div id="j_hideFormAdd">x</div>
+    </div>
+    <div class="form-item">
+        <label class="lb" for="j_txtLesson">手机品牌：</label>
+        <input class="txt" type="text" id="j_txtLesson" placeholder="请输入手机品牌">
+    </div>
+    <div class="form-item">
+        <label class="lb" for="j_txtBelSch">手机颜色：</label>
+        <input class="txt" type="text" id="j_txtBelSch" value="白色">
+    </div>
+    <div class="form-submit">
+        <input type="button" value="添加" id="j_btnAdd">
+    </div>
+</div>
+</div>
+<!-- 手风琴 -->
+<div class="footer" id="footer">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+</body>
+</html>
+
+
+
